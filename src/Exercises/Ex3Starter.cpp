@@ -39,5 +39,9 @@ int Painting::appraise() {
  * Hint: Remember that if you want to override a method you must declare it first on the header file of the subclass.
  */
 int Sculpture::appraise() {
-    return -1;
+    int price = Art::appraise();
+     if(this->material == MARBLE && this->artist.getFameScore() >= 5) return price * 1.69;
+     else if(this->material == METAL && this->artist.getFameScore() > 5) return price * 1.45;
+     else if(this->material != PLASTIC && this->artist.getFameScore() > 3) return price * 1.12;
+     else return 1500;
 }

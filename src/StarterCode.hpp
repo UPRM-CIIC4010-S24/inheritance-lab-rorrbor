@@ -211,11 +211,9 @@ class Sculpture : public Art {
      */
 virtual int appraise() {
     int price = Art::appraise();
-     if(!this->replica){
-        if(this->artist.getFameScore() > 8) return price * 1.66;
-        else if(this->artist.getFameScore() <= 8 && 5 <= this->artist.getFameScore()) return price * 1.37;
-        else return price + price * 0.15;
-     }
+     if(this->material == MARBLE && this->artist.getFameScore() >= 5) return price * 1.69;
+     else if(this->material == METAL && this->artist.getFameScore() > 5) return price * 1.45;
+     else if(this->material != PLASTIC && this->artist.getFameScore() > 3) return price * 1.12;
      else return 1500;
 }
     static vector<Sculpture *> segregateSculptures(const vector<Art *> &collection);
