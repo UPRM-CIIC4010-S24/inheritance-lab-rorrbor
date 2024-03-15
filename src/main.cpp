@@ -54,18 +54,18 @@ int main() {
 
     cout << boolalpha << endl;
     cout << "************** Exercise 1 **************" << endl;
-    // Art *art = dynamic_cast<Art *>(monaLisa);
-    // cout << monaLisa->getName() << " is Art: " << (art != NULL) << endl;
+    Art *art = dynamic_cast<Art *>(monaLisa);
+    cout << monaLisa->getName() << " is Art: " << (art != NULL) << endl;
 
     cout << "************** Exercise 2 **************" << endl;
-    // Art *art2 = dynamic_cast<Art *>(laPieta);
-    // cout << laPieta->getName() << " is Art: " << (art2 != NULL) << endl;
+    Art *art2 = dynamic_cast<Art *>(laPieta);
+    cout << laPieta->getName() << " is Art: " << (art2 != NULL) << endl;
 
     cout << "************** Exercise 3A **************" << endl;
-    // cout << butterfly->getName() << " appraise: " << butterfly->appraise() << endl;
-    // cout << reloj->getName() << " appraise: " << reloj->appraise() << endl;
-    // cout << flor->getName() << " appraise: " << flor->appraise() << endl;
-    // cout << monaLisa->getName() << " appraise: " << monaLisa->appraise() << endl;
+    cout << butterfly->getName() << " appraise: " << butterfly->appraise() << endl;
+    cout << reloj->getName() << " appraise: " << reloj->appraise() << endl;
+    cout << flor->getName() << " appraise: " << flor->appraise() << endl;
+    cout << monaLisa->getName() << " appraise: " << monaLisa->appraise() << endl;
 
     cout << "************** Exercise 3B **************" << endl;
     // cout << truth->getName() << " appraise: " << truth->appraise() << endl;

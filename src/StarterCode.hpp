@@ -155,6 +155,15 @@ class Painting : public Art {
      * qualify with the given style and its year is between the given start
      * and end (inclusive).
      */
+virtual int appraise() {
+    int price = Art::appraise();
+     if(!this->replica){
+        if(this->artist.getFameScore() > 8) return price * 1.66;
+        else if(this->artist.getFameScore() <= 8 && 5 <= this->artist.getFameScore()) return price * 1.37;
+        else return price + price * 0.15;
+     }
+     else return 1500;
+}
     static int countPaintings(const vector<Painting *> &collection, Style style, int start, int end);
 };
 

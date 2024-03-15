@@ -15,7 +15,13 @@
  * Hint: Remember that if you want to override a method you must declare it first on the header file of the subclass.
  * */
 int Painting::appraise() {
-    return -1;
+    int price = Art::appraise();
+     if(!this->replica){
+        if(this->artist.getFameScore() > 8) return price * 1.66;
+        else if(this->artist.getFameScore() <= 8 && 5 <= this->artist.getFameScore()) return price * 1.37;
+        else return price + price * 0.15;
+     }
+     else return 1500;
 }
 
 /* Exercise 3B
