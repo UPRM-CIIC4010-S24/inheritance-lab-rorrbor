@@ -216,5 +216,12 @@ virtual int appraise() {
      else if(this->material != PLASTIC && this->artist.getFameScore() > 3) return price * 1.12;
      else return 1500;
 }
-    static vector<Sculpture *> segregateSculptures(const vector<Art *> &collection);
+    static vector<Sculpture *> segregateSculptures(const vector<Art *> &collection){
+      vector<Sculpture*> result;
+      for(int i = 0; i < collection.size(); i++){
+          Sculpture* sculpture = dynamic_cast<Sculpture*>(collection[i]);
+          if(sculpture != nullptr) result.push_back(sculpture);
+      }
+      return result;
+    }
 };

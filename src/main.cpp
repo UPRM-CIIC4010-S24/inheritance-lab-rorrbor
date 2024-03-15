@@ -87,18 +87,18 @@ int main() {
     cout << "Quantity after filter: " << Art::filterCollectionByStyle(personalCollection, realism).size() << endl;
 
     cout << "************** Exercise 5 **************" << endl;
-    // personalCollection = {reloj, butterfly, aquella};
-    // cout << "Quantity before segregation: " << personalCollection.size() << endl;
-    // cout << "Quantity after segregation: " << Sculpture::segregateSculptures(personalCollection).size() << endl;
-    // personalCollection = {cosa, hombre, truth};
-    // cout << "Quantity before segregation: " << personalCollection.size() << endl;
-    // cout << "Quantity after segregation: " << Sculpture::segregateSculptures(personalCollection).size() << endl;
-    // personalCollection = {flor, cosa, belleza, hombre, truth};
-    // cout << "Quantity before segregation: " << personalCollection.size() << endl;
-    // cout << "Quantity after segregation: " << Sculpture::segregateSculptures(personalCollection).size() << endl;
-    // personalCollection = {};
-    // cout << "Quantity before segregation: " << personalCollection.size() << endl;
-    // cout << "Quantity after segregation: " << Sculpture::segregateSculptures(personalCollection).size() << endl;
+    personalCollection = {reloj, butterfly, aquella};
+    cout << "Quantity before segregation: " << personalCollection.size() << endl;
+    cout << "Quantity after segregation: " << Sculpture::segregateSculptures(personalCollection).size() << endl;
+    personalCollection = {cosa, hombre, truth};
+    cout << "Quantity before segregation: " << personalCollection.size() << endl;
+    cout << "Quantity after segregation: " << Sculpture::segregateSculptures(personalCollection).size() << endl;
+    personalCollection = {flor, cosa, belleza, hombre, truth};
+    cout << "Quantity before segregation: " << personalCollection.size() << endl;
+    cout << "Quantity after segregation: " << Sculpture::segregateSculptures(personalCollection).size() << endl;
+    personalCollection = {};
+    cout << "Quantity before segregation: " << personalCollection.size() << endl;
+    cout << "Quantity after segregation: " << Sculpture::segregateSculptures(personalCollection).size() << endl;
 
     cout << "************** Exercise 6A **************" << endl;
     // Collectable *collectable1 = dynamic_cast<Collectable *>(monaLisa);
