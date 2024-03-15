@@ -124,7 +124,13 @@ class Art {
      * Given a vector of Art pieces, return a vector containing only the
      * pieces that are of the given Style
      */
-    static vector<Art *> filterCollectionByStyle(const vector<Art *> &personalCollection, Style selected);
+static vector<Art *> filterCollectionByStyle(const vector<Art *> &personalCollection, Style selected) {
+    vector<Art *> result;
+    for(Art* art: personalCollection){
+        if(art->getStyle().equals(selected)) result.push_back(art);
+    }
+    return result;
+}
 };
 
 //////////////////////////////////////////////////////////////////////////
@@ -203,5 +209,14 @@ class Sculpture : public Art {
      * Sculptures in the original vector. You must use dynamic casting to
      * determine whether an Art piece is a Sculpture or not .
      */
+virtual int appraise() {
+    int price = Art::appraise();
+     if(!this->replica){
+        if(this->artist.getFameScore() > 8) return price * 1.66;
+        else if(this->artist.getFameScore() <= 8 && 5 <= this->artist.getFameScore()) return price * 1.37;
+        else return price + price * 0.15;
+     }
+     else return 1500;
+}
     static vector<Sculpture *> segregateSculptures(const vector<Art *> &collection);
 };

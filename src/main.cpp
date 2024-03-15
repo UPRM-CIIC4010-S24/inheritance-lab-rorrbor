@@ -68,23 +68,23 @@ int main() {
     cout << monaLisa->getName() << " appraise: " << monaLisa->appraise() << endl;
 
     cout << "************** Exercise 3B **************" << endl;
-    // cout << truth->getName() << " appraise: " << truth->appraise() << endl;
-    // cout << inspiration->getName() << " appraise: " << inspiration->appraise() << endl;
-    // cout << hombre->getName() << " appraise: " << hombre->appraise() << endl;
-    // cout << laPieta->getName() << " appraise: " << laPieta->appraise() << endl;
+    cout << truth->getName() << " appraise: " << truth->appraise() << endl;
+    cout << inspiration->getName() << " appraise: " << inspiration->appraise() << endl;
+    cout << hombre->getName() << " appraise: " << hombre->appraise() << endl;
+    cout << laPieta->getName() << " appraise: " << laPieta->appraise() << endl;
 
     cout << "************** Exercise 4 **************" << endl;
-    // personalCollection = {monaLisa, laPieta, hombre, butterfly, inspiration, aquella};
-    // cout << "Quantity before filter: " << personalCollection.size() << endl;
-    // cout << "Quantity after filter: " << Art::filterCollectionByStyle(personalCollection, cubism).size() << endl;
-    // cout << "Quantity before filter: " << personalCollection.size() << endl;
-    // cout << "Quantity after filter: " << Art::filterCollectionByStyle(personalCollection, trippy).size() << endl;
-    // personalCollection = {monaLisa, inspiration, inspiration};
-    // cout << "Quantity before filter: " << personalCollection.size() << endl;
-    // cout << "Quantity after filter: " << Art::filterCollectionByStyle(personalCollection, renaissance).size() << endl;
-    // personalCollection = {};
-    // cout << "Quantity before filter: " << personalCollection.size() << endl;
-    // cout << "Quantity after filter: " << Art::filterCollectionByStyle(personalCollection, realism).size() << endl;
+    personalCollection = {monaLisa, laPieta, hombre, butterfly, inspiration, aquella};
+    cout << "Quantity before filter: " << personalCollection.size() << endl;
+    cout << "Quantity after filter: " << Art::filterCollectionByStyle(personalCollection, cubism).size() << endl;
+    cout << "Quantity before filter: " << personalCollection.size() << endl;
+    cout << "Quantity after filter: " << Art::filterCollectionByStyle(personalCollection, trippy).size() << endl;
+    personalCollection = {monaLisa, inspiration, inspiration};
+    cout << "Quantity before filter: " << personalCollection.size() << endl;
+    cout << "Quantity after filter: " << Art::filterCollectionByStyle(personalCollection, renaissance).size() << endl;
+    personalCollection = {};
+    cout << "Quantity before filter: " << personalCollection.size() << endl;
+    cout << "Quantity after filter: " << Art::filterCollectionByStyle(personalCollection, realism).size() << endl;
 
     cout << "************** Exercise 5 **************" << endl;
     // personalCollection = {reloj, butterfly, aquella};
